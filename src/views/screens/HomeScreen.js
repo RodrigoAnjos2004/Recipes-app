@@ -23,7 +23,7 @@ const cardWidth = width / 2 - 20;
 
 const HomeScreen = ({navigation}) => {
   const [selectedCategoryIndex, setSelectedCategoryIndex] = React.useState(0);
-
+  
   const ListCategories = () => {
     return (
       <ScrollView
@@ -112,7 +112,7 @@ const HomeScreen = ({navigation}) => {
             </Text>
           </View>
           <Text style={{marginTop: 5, fontSize: 22, color: COLORS.grey}}>
-          Encontre receitas para divertir seu dia.
+          Encontre suas receitas favoritas.
           </Text>
         </View>
         <Image

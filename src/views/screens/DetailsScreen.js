@@ -14,7 +14,7 @@ const DetailsScreen = ({navigation, route}) => {
     <SafeAreaView style={{backgroundColor: COLORS.dark}}>
       <View style={style.header}>
       <BackButton goBack={navigation.goBack} />
-      <Header2>Details</Header2>
+      <Header2>Detalhes</Header2>
       </View>
       <ScrollView showsVerticalScrollIndicator={false}>
         <View

@@ -23,7 +23,7 @@ export default function ResetPasswordScreen({ navigation }) {
     <Background>
       <BackButton goBack={navigation.goBack} />
       <Logo />
-      <Header>Restore Password</Header>
+      <Header>Restaurar senha</Header>
       <TextInput
         label="E-mail address"
         returnKeyType="done"
@@ -42,7 +42,7 @@ export default function ResetPasswordScreen({ navigation }) {
         onPress={sendResetPasswordEmail}
         style={{ marginTop: 16 }}
       >
-        Send Instructions
+        Enviar instruções
       </Button>
     </Background>
   )

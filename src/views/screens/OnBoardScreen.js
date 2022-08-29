@@ -73,7 +73,7 @@ const OnBoardScreen = ({navigation}) => {
       />
        <Header>CoffeSnack</Header>
       <Paragraph>
-       Um app de quem gosta de qualidade , para quem procura qualidade!
+       Um app para quem quer descobrir o verdadeiro sabor da vida
       </Paragraph>
       <Button
         mode="outlined"

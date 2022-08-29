@@ -48,7 +48,7 @@ const BottomNavigator = () => {
                 top: -25,
                 elevation: 5,
               }}>
-              <Icon name="add-outline" color={COLORS.primary} size={28} />
+              <Icon name="home" color={COLORS.primary} size={28} />
             </View>
           ),
         }}
@@ -58,7 +58,7 @@ const BottomNavigator = () => {
         component={CartScreen}
         options={{
           tabBarIcon: ({color}) => (
-            <Icon name="heart" color={color} size={28} />
+            <Icon name="home" color={color} size={28} />
           ),
         }}
       />

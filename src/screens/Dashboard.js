@@ -9,7 +9,7 @@ export default function Dashboard({ navigation }) {
   return (
     <Background>
       <Logo />
-      <Header>Let’s start</Header>
+      <Header>Vamos começar</Header>
       <Paragraph>
         ?
       </Paragraph>
