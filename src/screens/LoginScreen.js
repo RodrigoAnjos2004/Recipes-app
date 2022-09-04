@@ -10,24 +10,47 @@ import BackButton from '../components/BackButton'
 import { theme } from '../core/theme'
 import { emailValidator } from '../helpers/emailValidator'
 import { passwordValidator } from '../helpers/passwordValidator'
+import { initializeApp } from "firebase/app";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 export default function LoginScreen({ navigation }) {
   const [email, setEmail] = useState({ value: '', error: '' })
   const [password, setPassword] = useState({ value: '', error: '' })
 
+  const firebaseConfig = {
+    apiKey: "AIzaSyC6-FxDkAeypdyF9o9gO4fF7fsedWkAEyg",
+    authDomain: "login-5d03f.firebaseapp.com",
+    projectId: "login-5d03f",
+    storageBucket: "login-5d03f.appspot.com",
+    messagingSenderId: "1034057507799",
+    appId: "1:1034057507799:web:8c7677bf9ecdb89c8e2192",
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig)
+
   const onLoginPressed = () => {
-    const emailError = emailValidator(email.value)
-    const passwordError = passwordValidator(password.value)
-    if (emailError || passwordError) {
-      setEmail({ ...email, error: emailError })
-      setPassword({ ...password, error: passwordError })
-      return
-    }
-    navigation.reset({
-      index: 0,
-      routes: [{ name: 'Dashboard' }],
+  
+    const auth = getAuth(app)
+    signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in
+      const user = userCredential.user;
+      console.log(user);
     })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+
+    });
+
+    navigation.reset({
+          index: 0,
+          routes: [{ name: "Dashboard" }],
+        })
+    
   }
+
 
   return (
     <Background>
